@@ -107,7 +107,11 @@ b.light-color{ color: #444; }
 
 .position-static{ position: static; }
 
-.font-white{ color: #fff; }
+.font-white{ color: black;
+	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black; 
+}
 
 
 /* ---------------------------------
@@ -119,12 +123,12 @@ b.light-color{ color: #444; }
 .main-area:after{ content:''; position: absolute; top: 0; bottom: 0;left: 0; right: 0; z-index: -1;  
 	opacity: .4; background:#fff}
 
-.main-area .desc{ margin: 20px auto; max-width: 500px; }
-	
+.main-area .desc{ margin: 20px auto; max-width: 500px; font-weight: bold; color: black;}
+
 .main-area .notify-btn{ padding: 13px 35px; border-radius: 50px; border: 2px solid #F84982;
 	color: #fff; background: #F84982; }
 
-.main-area .notify-btn:hover{ background: none; }
+.main-area .notify-btn:hover{ background: magenta; }
 
 .main-area .social-btn{ position: absolute; bottom: 40px; width: 100%; left: 50%; transform: translateX(-50%); }
 
